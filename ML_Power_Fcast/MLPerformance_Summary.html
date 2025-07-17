@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Data created and report written by Steven Stills">
+    <title>Improvements to Power Forecasting for Client 1</title>
+    <style>
+        :root {
+            --text: #001b2e;
+            --light-grey: #E8e7e1;
+            --primary: #CBFB00;
+            --secondary: #16DFba;
+            --alert: #DF686c;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px;
+            background: #efefef;
+            font-family: "Segoe UI", "Helvetica Neue", "Inter", sans-serif;
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+        }
+
+        .page {
+            background: white;
+            width: 912px; /* ~15% wider than A4 (794px + 15%) */
+            padding: 2.5rem;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+
+        h1, h2 {
+            color: var(--text);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 0.5em;
+        }
+
+        h2 {
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 5px;
+            margin-top: 40px;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo-container img {
+            max-width: 200px;
+            height: auto;
+        }
+
+        ul {
+            padding-left: 1.2em;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .image-placeholder {
+            border: 2px solid var(--light-grey);
+            background-color: #f9f9f9;
+            color: #aaa;
+            text-align: center;
+            padding: 60px;
+            margin: 30px auto;
+            font-size: 1em;
+            max-width: 100%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            border: 1px solid var(--light-grey);
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--light-grey);
+        }
+
+        .primary-color { color: var(--primary); }
+        .secondary-color { color: var(--secondary); }
+        .alert-color { color: var(--alert); }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="logo-container">
+            <img src="https://github.com/stevenstillstraining/Power_Forecast/blob/main/Logos/MY%20LOGO.png?raw=true" alt="Logo">
+        </div>
+
+        <h1>Improvements to Power Forecasting for Client 1</h1>
+
+        <h2>Section 1: Summary</h2>
+        <p>
+            The client was using a “roll forward method” using power volume from 1 week + in the past and rolling forward a week to create their trade positions. This caused:
+        </p>
+        <ul>
+            <li>Errors at start of month</li>
+            <li>Daylight savings issues</li>
+            <li>Trades unresponsive to big portfolio swings</li>
+            <li>Intensive manual overrides for bank holidays and Christmases</li>
+        </ul>
+
+        <div class="image-placeholder">[Graph Image Placeholder: Traded vs Actual Position and MAPE]</div>
+
+        <p>I arranged:</p>
+        <ul>
+            <li>Detailed weather subscription & API setup</li>
+            <li>Collab with operations department for objections</li>
+            <li>Link to portfolio EAC movement</li>
+            <li>Tensor Flow ML model</li>
+        </ul>
+
+        <p>and achieved:</p>
+
+        <div class="image-placeholder">[Graph Image Placeholder: Forecast Accuracy Result]</div>
+
+        <p>With MAPE improvements across the board.</p>
+
+        <div class="image-placeholder">[Previous Heat Map Placeholder]</div>
+        <div class="image-placeholder">[After Heat Map Placeholder]</div>
+
+        <p>
+            With full model found in my Git:<br>
+            <a href="https://github.com/stevenstillstraining/Power_Forecast" target="_blank">
+                https://github.com/stevenstillstraining/Power_Forecast
+            </a>
+        </p>
+
+        <h2>Section 2: Model Approach</h2>
+        <p>
+            The following details the ML Approach taken which I have converted into a Jupyter notebook for improved legibility:
+        </p>
+    </div>
+</body>
+</html>
